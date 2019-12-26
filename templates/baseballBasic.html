@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Baseball</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'css/index/heroic-features.css'%}">
+    {%block css %}{% endblock %}
+</head>
+<body>
+    {%include 'nav.html'%}
+    <div class="container">
+        {%block design %}{% endblock %}
+    </div>
+    {%include 'footer.html'%}
+<script src="{% static 'scripts/jquery/jquery.js' %}"></script>
+<script src="{% static 'scripts/bootstrap/bootstrap.js' %}"></script>
+{%block script %}{% endblock %}
+</body>
+</html>
