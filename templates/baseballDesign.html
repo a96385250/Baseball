@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Baseball</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/bootsrap/bootstrap.css' %}" >
+    <link rel="stylesheet" href="{% static 'styles/css/heroic-features.css' %}" >
+    {% block designCSS %}{% endblock %}
+</head>
+<body>
+  {% include 'nev.html' %}
+  <div class="container">
+  {% block content %}{% endblock %}
+  </div>
+  {% include 'footer.html' %}
+  <script src="{% static 'scripts/query/jquery.js' %}"></script>
+  <script src="{% static 'scripts/bootstrap/bootstrap.bundle.js' %}"></script>
+  {% block jsDesign %}{% endblock %}
+</body>
+</html>
