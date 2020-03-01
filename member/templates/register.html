@@ -1,0 +1,41 @@
+{%extends "baseballDesign.html" %}
+{% block designCSS %}
+<link rel="stylesheet" href="../static/styles/register.css">
+{% endblock %}
+{% block content %}
+<div class="card rounded-0 registerDivTile mb-5" id="register-form">
+    <div class="card-header">
+        <h3 class="mb-0">註冊</h3>
+    </div>
+    <div class="card-body">
+        <form class="form" autocomplete="off" novalidate="" method="POST" action="create">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="playerName">姓名</label>
+                <input type="text" class="form-control form-control-lg rounded-0" name="name" id="playerName">
+            </div>
+            <div class="form-group">
+                <label for="playerAccount">帳號</label>
+                <input type="text" class="form-control form-control-lg rounded-0" name="account" id="playerAccount" required="">
+            </div>
+            <div class="form-group">
+                <label for="playerPassword">密碼</label>
+                <input type="password" class="form-control form-control-lg rounded-0" id="playerPassword" name="password" placeholder="輸入6~8碼，包含一個一英文字母">
+
+            </div>
+            <div class="form-group">
+                <label for="password2">輸入相同密碼</label>
+                <input type="password" class="form-control form-control-lg rounded-0" id="password2">
+            </div>
+            <div class="form-group">
+                <label for="playerTeam">球隊</label>
+                <select class="form-control" id="playerTeam" name="team_id">
+                  <option value="1">迷彩戰士</option>
+                  <option value="2">轟雷</option>
+                </select>
+              </div>
+            <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">確認</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
